@@ -15,7 +15,11 @@ class Solution {
         
     }*/
         
-        int i=m-1;
+        
+        //2 approach 2 pinters
+        //
+        
+       /* int i=m-1;
         int j=n-1;
         int k=m+n-1;
         
@@ -30,6 +34,23 @@ class Solution {
                 k--;
                 j--;
             }
+        }
+        */
+        
+        List<Integer> arrayList=new ArrayList<>();
+        
+        for(int i=0;i<m;i++){
+        arrayList.add(nums1[i]);
+        }
+        
+        for(int i=0;i<nums2.length;i++){
+        arrayList.add(nums2[i]);
+        }
+        
+        Collections.sort(arrayList);
+        
+        for(int i=0;i<m+n;i++){
+            nums1[i]=arrayList.get(i);
         }
     }
         
